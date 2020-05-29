@@ -1,10 +1,22 @@
-# Botkit Starter Kit
+# Official Tongue-in-Cheek HR Slack Bot for Meteor Affinity
 
-This is a Botkit starter kit for slack, created with the [Yeoman generator](https://github.com/howdyai/botkit/tree/master/packages/generator-botkit#readme).
+## Roadmap
 
-To complete the configuration of this bot, make sure to update the included `.env` file with your platform tokens and credentials.
+### Culture
 
-[Botkit Docs](https://botkit.ai/docs/v4)
+- comedic relief with matched messages
+- comedic relief with joke telling
+- tells you the core values
 
-This bot is powered by [a folder full of modules](https://botkit.ai/docs/v4/core.html#organize-your-bot-code). 
-Edit the samples, and add your own in the [features/](features/) folder.
+## Organizational
+
+- prompting for guesstimates for blast
+- announcing blast winner
+- remind of birthdays
+- reminder of holidays in US and S. America
+- reminder of important dates in shared calendar (blasts, etc)
+- onboarding
+
+This project is based on the awesome [Botkit Docs](https://botkit.ai/docs/v4)
+
+https://github.com/kelektiv/node-cron will be used for cron tasks.
