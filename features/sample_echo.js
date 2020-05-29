@@ -30,7 +30,7 @@ module.exports = function (controller) {
   //     await bot.reply(message, "Nick's the guy who likes 'em big!");
   //   });
 
-  controller.on("message,direct_message", async (bot, message) => {
-    await bot.reply(message, `Echo: ${message.text}`);
-  });
+  // controller.on("message,direct_message", async (bot, message) => {
+  //   await bot.reply(message, `Echo: ${message.text}`);
+  // });
 };

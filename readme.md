@@ -5,8 +5,8 @@
 ### Culture
 
 - comedic relief with matched messages
-- comedic relief with joke telling
-- tells you the core values
+- comedic relief with joke telling API (dad jokes, chuck norris, etc)
+- tells you our core values when prompted
 
 ## Organizational
 
