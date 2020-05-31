@@ -3,38 +3,39 @@
  * Licensed under the MIT License.
  */
 module.exports = function (controller) {
-  // use a function to match a condition in the message
+  // // use a function to match a condition in the message
+  // controller.hears(
+  //   async (message) => message.text && message.text.toLowerCase() === "foo",
+  //   ["message"],
+  //   async (bot, message) => {
+  //     await bot.reply(message, 'I heard "foo" via a function test');
+  //   }
+  // );
+
   controller.hears(
-    async (message) => message.text && message.text.toLowerCase() === "foo",
-    ["message"],
-    async (bot, message) => {
-      await bot.reply(message, 'I heard "foo" via a function test');
+    ["carlos"],
+    ["direct_message", "direct_mention"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text:
+          "Why, it's my creator! You have said his name! You should use his formal title. Here are some options: ",
+        attachments: [
+          {
+            text: "The Cherished One",
+          },
+          {
+            text: "Our Beloved",
+          },
+          {
+            text: "Dear Leader",
+          },
+          {
+            text: "The REAL Kim Jong Juan! :grinning:",
+          },
+        ],
+      });
     }
   );
-
-  controller.hears(["carlos"], ["message", "mention"], async function (
-    bot,
-    message
-  ) {
-    await bot.reply(message, {
-      text:
-        "Why, it's my creator! You have said his name! You should use his formal title. Here are some options: ",
-      attachments: [
-        {
-          text: "The Cherished One",
-        },
-        {
-          text: "Our Beloved",
-        },
-        {
-          text: "Dear Leader",
-        },
-        {
-          text: "The REAL Kim Jong Juan! :grinning:",
-        },
-      ],
-    });
-  });
 
   // use a regular expression to match the text of the message
   //   controller.hears(
@@ -92,7 +93,7 @@ module.exports = function (controller) {
     ["inspire"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
-      await bot.reply(message, {
+      await bot.replyEphemeral(message, {
         text:
           "Well, well, well. It looks like some CRYBABY needs inspiration. How about you stop wasting time and get back to work before I give you something to cry about? J/k I totally love you. (Hope that inspired you... TO GET BACK TO WORK)",
       });
@@ -105,18 +106,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.reply(message, {
         text:
-          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the disney character. Get it? Ok, I'll let myself out.",
-      });
-    }
-  );
-
-  controller.hears(
-    ["info", "who are you", "what can you do", "help"],
-    ["direct_mention", "direct_message"],
-    async function (bot, message) {
-      await bot.reply(message, {
-        text:
-          "Hi there. I am the Official Meteor Affinity Chat Bot. I handle all things HR. You can use me by @mentioning me with keywords. Right now can prompt me with: '@hr_bot hi (or hello or good morning)', '@hr_bot why are you a duck?', '@hr_bot report a violation', '@hr_bot inspire me'. I'm at version 1, so I not that smart. Be patient as I learn. I am a quick learner. For example, I learned to hate DMB. There, Liz. I said it! What are you going to do, report me to HR?",
+          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the disney character. Get it? If you want to read wise advice from THE DONALD, simply type `@hr_bot donald trump` in the chat.",
       });
     }
   );
@@ -137,7 +127,7 @@ module.exports = function (controller) {
     ["direct_mention", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
-        text: "My Lord and Savior C. San Diego.",
+        text: "My main squeeze, wherever in the world he may be... :charly:.",
       });
     }
   );
