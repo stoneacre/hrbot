@@ -34,11 +34,21 @@ module.exports = function (controller) {
 
   // match any one of set of mixed patterns like a string, a regular expression
   controller.hears(
-    ["fernan", "hi fernan"],
+    ["fernan", "fernan arrived"],
     ["message", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
         text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
+      });
+    }
+  );
+
+  controller.hears(
+    ["sacrifice", "sacrifice time"],
+    ["message", "direct_message"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text: "Nick! you are being summoned!",
       });
     }
   );
