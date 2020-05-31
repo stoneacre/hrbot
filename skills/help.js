@@ -145,7 +145,7 @@ module.exports = function (controller) {
     ],
   };
 
-  controller.on("bot_channel_join", async (bot, message) => {
+  controller.on("member_joined_channel", async (bot, message) => {
     await bot.reply(message, helpBlock);
   });
 
