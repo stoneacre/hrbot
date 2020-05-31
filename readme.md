@@ -4,6 +4,8 @@
 
 Currently deployed to [HEROKU](https://dashboard.heroku.com/apps/meteor-hr-bot/) as it's free and easy. We will probably migrate to serverless functions at some point.
 
+Every push to master will automatically deploy to Heroku. We currently do not have any tests, so be careful!
+
 ## Roadmap
 
 ### Culture
