@@ -57,14 +57,15 @@ module.exports = function (controller) {
   //     }
   //   );
 
-  controller.hears(["fernan"], ["message", "direct_message"], async function (
-    bot,
-    message
-  ) {
-    await bot.reply(message, {
-      text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
-    });
-  });
+  controller.hears(
+    ["fernan"],
+    ["direct_mention", "direct_message"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
+      });
+    }
+  );
 
   controller.hears(
     ["sacrifice"],
@@ -95,7 +96,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.replyEphemeral(message, {
         text:
-          "Well, well, well. It looks like some CRYBABY needs inspiration. How about you stop wasting time and get back to work before I give you something to cry about? J/k I totally love you. If you need real inspiration try `@hr_bot kanye` to get some inspirational wisdom.",
+          "Well, well, well. It looks like some CRYBABY :sob: needs inspiration. How about you stop wasting time and get back to work before I give you something to cry about? J/k I totally love you. If you need real inspiration try `@hr_bot kanye` to get some inspirational wisdom.",
       });
     }
   );
