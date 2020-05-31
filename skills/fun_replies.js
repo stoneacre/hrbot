@@ -84,7 +84,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.replyEphemeral(message, {
         text:
-          "Now, look who's acting like a little bitch. Stop being so sensitive and get back to work!",
+          "Now, look who's acting like a little biatch. Stop being so sensitive and if you really want to report a violation, you can do so by writing to THE BOSS: `@hr_bot charlie sheen`",
       });
     }
   );
@@ -95,7 +95,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.replyEphemeral(message, {
         text:
-          "Well, well, well. It looks like some CRYBABY needs inspiration. How about you stop wasting time and get back to work before I give you something to cry about? J/k I totally love you. (Hope that inspired you... TO GET BACK TO WORK)",
+          "Well, well, well. It looks like some CRYBABY needs inspiration. How about you stop wasting time and get back to work before I give you something to cry about? J/k I totally love you. If you need real inspiration try `@hr_bot kanye` to get some inspirational wisdom.",
       });
     }
   );
@@ -106,7 +106,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.reply(message, {
         text:
-          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the disney character. Get it? If you want to read wise advice from THE DONALD, simply type `@hr_bot donald trump` in the chat.",
+          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the disney character. Get it? If you want sage advice from THE DONALD, simply type `@hr_bot donald trump` in the chat.",
       });
     }
   );
