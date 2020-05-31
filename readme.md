@@ -1,5 +1,9 @@
 # Official Tongue-in-Cheek HR Slack Bot for Meteor Affinity
 
+## Deployment
+
+Currently deployed to [HEROKU](https://dashboard.heroku.com/apps/meteor-hr-bot/) as it's free and easy. We will probably migrate to serverless functions at some point.
+
 ## Roadmap
 
 ### Culture
