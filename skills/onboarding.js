@@ -44,7 +44,7 @@ module.exports = function (controller) {
         pattern: "no",
         handler: async function (answer, convo, bot) {
           await bot.say(
-            "Oh snap! We'll have to start over then! Just start the process over again by typing `@hr_bot onboarding` whenever you are ready. :sob:"
+            ":sob: Oh snap! We'll have to start over then! Just start the process over again by typing `@hr_bot onboarding` whenever you are ready. :sob:"
           );
           await convo.stop();
         },
