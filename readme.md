@@ -4,8 +4,8 @@
 
 ### Culture
 
-- comedic relief with matched messages
-- comedic relief with joke telling API (dad jokes, chuck norris, etc)
+- ~~comedic relief with matched messages~~
+- ~~comedic relief with joke telling API (dad jokes, chuck norris, etc)~~
 - tells you our core values when prompted
 
 ## Organizational
@@ -16,6 +16,10 @@
 - reminder of holidays in US and S. America
 - reminder of important dates in shared calendar (blasts, etc)
 - onboarding
+
+## Developer Tools
+
+- Integrate [Botkit CMS](https://github.com/howdyai/botkit-cms)
 
 This project is based on the awesome [Botkit Docs](https://botkit.ai/docs/v4)
 
