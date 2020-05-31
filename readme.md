@@ -6,16 +6,17 @@
 
 - ~~comedic relief with matched messages~~
 - ~~comedic relief with joke telling API (dad jokes, chuck norris, etc)~~
-- tells you our core values when prompted
+- ~~links to our core values when prompted~~
+- ~~links to our Employee Handbook when prompted~~
 
 ## Organizational
 
 - prompting for guesstimates for blast
 - announcing blast winner
-- remind of birthdays
 - reminder of holidays in US and S. America
 - reminder of important dates in shared calendar (blasts, etc)
 - onboarding
+  -- hr bot info should launch when someone joins general
 
 ## Developer Tools
 
