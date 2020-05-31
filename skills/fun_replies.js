@@ -56,7 +56,6 @@ module.exports = function (controller) {
   //     }
   //   );
 
-  // match any one of set of mixed patterns like a string, a regular expression
   controller.hears(["fernan"], ["message", "direct_message"], async function (
     bot,
     message
@@ -68,10 +67,12 @@ module.exports = function (controller) {
 
   controller.hears(
     ["sacrifice"],
-    ["message", "direct_message"],
+    ["message", "direct_message", "direct_mention"],
     async function (bot, message) {
       await bot.reply(message, {
-        text: "Nick! you are being summoned!",
+        //U38ADPJGM Nick's slack id
+        //U37FZRA6L Charlie's slack id for testing
+        text: "<@U38ADPJGM>, you are being summoned! A sacrifice is needed.",
       });
     }
   );
