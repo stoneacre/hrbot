@@ -24,6 +24,17 @@ module.exports = function (controller) {
     }
   );
 
+  controller.hears(["dad joke", "joke"], ["direct_mention"], async function (
+    bot,
+    message
+  ) {
+    const dadJoke = await getJoke("dadJoke");
+
+    await bot.reply(message, {
+      text: `${dadJoke} :laughing:`,
+    });
+  });
+
   async function getJoke(choice) {
     const APIS = {
       chuckNorris: {
@@ -34,12 +45,18 @@ module.exports = function (controller) {
         url: "http://api.tronalddump.io/random/quote",
         payloadPath: "value",
       },
+      dadJoke: {
+        url: "https://icanhazdadjoke.com",
+        payloadPath: "joke",
+      },
     };
 
     const api = APIS[choice];
 
     try {
-      const response = await axios.get(api.url);
+      const response = await axios.get(api.url, {
+        headers: { Accept: "application/json" },
+      });
 
       //each API will return a different payload, so we use reduce to get the value based on the path string
       const joke = api.payloadPath
