@@ -146,11 +146,6 @@ module.exports = function (controller) {
   };
 
   controller.on("member_joined_channel", async (bot, message) => {
-    const { user_id } = await bot.api.bots.info();
-    await bot.reply(message, `The user_id is: ${user_id}`);
-    await bot.reply(message, `The message user is ${message.user}`);
-
-    // if (message.user === user_id) { }
     await bot.reply(message, helpBlock);
   });
 
