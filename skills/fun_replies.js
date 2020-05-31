@@ -85,7 +85,7 @@ module.exports = function (controller) {
     async function (bot, message) {
       await bot.replyEphemeral(message, {
         text:
-          "Now, look who's acting like a little biatch. Stop being so sensitive and if you really want to report a violation, you can do so by writing to THE BOSS: `@hr_bot charlie sheen`",
+          "Now, look who's acting like a little bitch. Stop being so sensitive and if you really want to report a violation, you can do so by writing to THE BOSS: `@hr_bot charlie sheen`",
       });
     }
   );
