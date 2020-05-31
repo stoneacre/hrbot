@@ -23,6 +23,10 @@ Every push to master will automatically deploy to Heroku. We currently do not ha
 - reminder of important dates in shared calendar (blasts, etc)
 - onboarding
   -- hr bot info should launch when someone joins general
+- company-specific version of capturing relevant feedback. See [this inspiration](https://meteoraffinity.slack.com/apps/ABQJ20E2Z-grow)
+- create OKRs, with reminders, and allow commenting. See [this project](https://meteoraffinity.slack.com/apps/AU9M045ML-simple-goals) for inspiration.
+- daily standup with post to channels per team. [inspiration](https://meteoraffinity.slack.com/apps/A44PZQW83-dailybot)
+- MAYBE a simple knowledge base collector [inspiration](https://meteoraffinity.slack.com/apps/A0ZP4FD0B-obie) but we likely don't need this at our size.
 
 ## Developer Tools
 
