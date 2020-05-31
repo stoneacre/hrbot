@@ -145,10 +145,14 @@ module.exports = function (controller) {
     ],
   };
 
-  //TODO: launch help message when the bot is added to a channel
-  // controller.on("member_joined_channel", async (bot, message) => {
-  //   await bot.reply(message, helpBlock);
-  // });
+  controller.on("member_joined_channel", async (bot, message) => {
+    const { user_id } = await bot.api.bots.info();
+    await bot.reply(message, `The user_id is: ${user_id}`);
+    await bot.reply(message, `The message user is ${message.user}`);
+
+    // if (message.user === user_id) { }
+    await bot.reply(message, helpBlock);
+  });
 
   controller.hears(
     ["help", "info"],
