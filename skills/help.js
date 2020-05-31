@@ -145,15 +145,16 @@ module.exports = function (controller) {
     ],
   };
 
-  controller.on("member_joined_channel", async (bot, message) => {
-    await bot.reply(message, helpBlock);
-  });
+  //TODO: launch help message when the bot is added to a channel
+  // controller.on("member_joined_channel", async (bot, message) => {
+  //   await bot.reply(message, helpBlock);
+  // });
 
   controller.hears(
     ["help", "info"],
     ["direct_mention", "direct_message"],
     async (bot, message) => {
-      await bot.reply(message, helpBlock);
+      await bot.replyEphemeral(message, helpBlock);
     }
   );
 };
