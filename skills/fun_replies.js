@@ -12,6 +12,30 @@ module.exports = function (controller) {
     }
   );
 
+  controller.hears(["carlos"], ["message", "mention"], async function (
+    bot,
+    message
+  ) {
+    await bot.reply(message, {
+      text:
+        "Why, it's my creator! You have said his name! You should use his formal title. Here are some options: ",
+      attachments: [
+        {
+          text: "The Cherished One",
+        },
+        {
+          text: "Our Beloved",
+        },
+        {
+          text: "Dear Leader",
+        },
+        {
+          text: "The REAL Kim Jong Juan! :grinning:",
+        },
+      ],
+    });
+  });
+
   // use a regular expression to match the text of the message
   //   controller.hears(
   //     new RegExp(/^\d+$/),
@@ -33,18 +57,17 @@ module.exports = function (controller) {
   //   );
 
   // match any one of set of mixed patterns like a string, a regular expression
-  controller.hears(
-    ["fernan", "fernan arrived"],
-    ["message", "direct_message"],
-    async function (bot, message) {
-      await bot.reply(message, {
-        text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
-      });
-    }
-  );
+  controller.hears(["fernan"], ["message", "direct_message"], async function (
+    bot,
+    message
+  ) {
+    await bot.reply(message, {
+      text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
+    });
+  });
 
   controller.hears(
-    ["sacrifice", "sacrifice time"],
+    ["sacrifice"],
     ["message", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
@@ -54,18 +77,18 @@ module.exports = function (controller) {
   );
 
   controller.hears(
-    ["report", "violation", "report violation", "report a violation"],
+    ["violation"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
-      await bot.reply(message, {
+      await bot.replyEphemeral(message, {
         text:
-          "Now look who's acting like a little bitch. Stop being so sensitive and get back to work!",
+          "Now, look who's acting like a little bitch. Stop being so sensitive and get back to work!",
       });
     }
   );
 
   controller.hears(
-    ["inspire me"],
+    ["inspire"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
@@ -76,12 +99,12 @@ module.exports = function (controller) {
   );
 
   controller.hears(
-    ["duck", "why are you a duck?"],
+    ["duck"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
         text:
-          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the duck. Get it? Ok, I'll let myself out.",
+          "My life-long idol is the DONALD. When he fired people on 'The Apprentice' it would bring me tears of joy. Donald... president... and the disney character. Get it? Ok, I'll let myself out.",
       });
     }
   );
@@ -98,7 +121,7 @@ module.exports = function (controller) {
   );
 
   controller.hears(
-    ["hi", "hello", "good morning"],
+    ["hi", "hello", "good morning", "good afternoon"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
