@@ -1,7 +1,5 @@
-/**
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License.
- */
+const { getRandomInt } = require("../utils");
+
 module.exports = function (controller) {
   // // use a function to match a condition in the message
   // controller.hears(
@@ -116,9 +114,27 @@ module.exports = function (controller) {
     ["hi", "hello", "good morning", "good afternoon"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
+      const GREETINGS = [
+        "Why hello there! Say...did you get even better-looking today (if that's even possible!)? I hope you have a wonderful day!",
+        "WHAAAAZZZZUUUUUUUUUPPPPP!?!?",
+        "Top o' the mornin' to  ya!",
+        "Hi right back at ya!",
+        "Hola!",
+        "Yo! What's the craic?",
+        "How hops it?",
+        "Ahoy, matey!",
+        "`tips hat and winks`",
+        "Salute plurimam dicit. Si vales, bene est, ego valeo.",
+        "Aloha!",
+        "Namaste",
+        "How's tricks?",
+        "I have to admit, I was having a pretty bad day, but thanks to you, things are looking up! Have a great day!",
+      ];
+
+      const greeting = GREETINGS[getRandomInt(0, GREETINGS.length)];
+
       await bot.reply(message, {
-        text:
-          "Why hello there! Say...did you get even better-looking today (if that's even possible!)? I hope you have a wonderful day!",
+        text: greeting,
       });
     }
   );

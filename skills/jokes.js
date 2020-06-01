@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { getRandomInt } = require("../utils");
 
 module.exports = function (controller) {
   controller.hears(["chuck norris"], ["direct_mention"], async function (
@@ -50,7 +51,7 @@ module.exports = function (controller) {
     bot,
     message
   ) {
-    const sheenQuotes = [
+    const SHEEN_QUOTES = [
       "It's quite fitting that Slash is getting a star on the very street Axl Rose will one day be sleeping on,",
       "I never insert myself into situations where I am completely blind or don't have a single clue about what's being discussed. I don't to be an impostor and just helping for the sake of helping. If I am going to help somebody, I want it to be valuable. And if they don't follow my advice, then they are a frigging idiot. I'm joking.",
       "The best way to not get your heart broken, is pretending you don't have one.",
@@ -81,13 +82,7 @@ module.exports = function (controller) {
       "Winning, anyone? Rhymes with winning. Anyone? Yeah, that would be us. Sorry, man, didn’t make the rules. Oops!",
     ];
 
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-    }
-
-    var sheenQuote = sheenQuotes[getRandomInt(0, sheenQuotes.length)];
+    var sheenQuote = SHEEN_QUOTES[getRandomInt(0, sheenQuotes.length)];
 
     await bot.reply(message, {
       text: `${sheenQuote} :exploding_head:`,
