@@ -28,7 +28,10 @@ module.exports = function (controller) {
             text: "Dear Leader",
           },
           {
-            text: "The REAL Kim Jong Juan! :grinning:",
+            text: "The REAL Kim Jong Juan!",
+          },
+          {
+            text: "hr_bot's main squeeze",
           },
         ],
       });
@@ -72,7 +75,7 @@ module.exports = function (controller) {
       await bot.reply(message, {
         //U38ADPJGM Nick's slack id
         //U37FZRA6L Charlie's slack id for testing
-        text: "<@U38ADPJGM>, you are being summoned! A sacrifice is needed.",
+        text: "<@U38ADPJGM>, you are being summoned! A sacrifice is needed!",
       });
     }
   );
@@ -81,9 +84,19 @@ module.exports = function (controller) {
     ["violation"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
+      const VIOLATIONS = [
+        "Now, look who's acting like a little bitch. Stop being so sensitive and if you really want to report a violation, you can do so by writing to THE BOSS: `@hr_bot charlie sheen`",
+        "Oh! A violation?! Ok... this is serious. Umm... I will be right back... just going to... ummm.. buy some cigarettes. Don't wait up.",
+        "No need to say another word. I have read your mind and the appropriate action will be taken. To escalate the request, please reach out to my boss `@hr_bot donald trump`",
+        "Oh, don't sweat it! HR violations build character!",
+        "I'm sorry to hear that. I wish that there was an HR department with an automated bot who could help you. You may want to take it up with my boss: `@hr_bot charlie sheen`.",
+        "Awwww... do you need a hug?",
+      ];
+
+      const response = VIOLATIONS[getRandomInt(0, VIOLATIONS.length)];
+
       await bot.replyEphemeral(message, {
-        text:
-          "Now, look who's acting like a little bitch. Stop being so sensitive and if you really want to report a violation, you can do so by writing to THE BOSS: `@hr_bot charlie sheen`",
+        text: response,
       });
     }
   );
