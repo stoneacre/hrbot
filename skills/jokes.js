@@ -82,7 +82,7 @@ module.exports = function (controller) {
       "Winning, anyone? Rhymes with winning. Anyone? Yeah, that would be us. Sorry, man, didn’t make the rules. Oops!",
     ];
 
-    var sheenQuote = SHEEN_QUOTES[getRandomInt(0, sheenQuotes.length)];
+    var sheenQuote = SHEEN_QUOTES[getRandomInt(0, SHEEN_QUOTES.length)];
 
     await bot.reply(message, {
       text: `${sheenQuote} :exploding_head:`,
