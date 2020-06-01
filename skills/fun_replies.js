@@ -91,6 +91,7 @@ module.exports = function (controller) {
         "Oh, don't sweat it! HR violations build character!",
         "I'm sorry to hear that. I wish that there was an HR department with an automated bot who could help you. You may want to take it up with my boss: `@hr_bot charlie sheen`.",
         "Awwww... do you need a hug?",
+        "You gotta tell Kanye! He always has the best advice. `@hr_bot kanye`",
       ];
 
       const response = VIOLATIONS[getRandomInt(0, VIOLATIONS.length)];
