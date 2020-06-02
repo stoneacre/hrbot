@@ -63,7 +63,8 @@ module.exports = function (controller) {
     ["direct_mention", "direct_message"],
     async function (bot, message) {
       await bot.reply(message, {
-        text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
+        // text: "Oh...it's 'that' guy. Hi Fernan.. (not that I care)",
+        text: "Fernando! Sup, dawg!",
       });
     }
   );
