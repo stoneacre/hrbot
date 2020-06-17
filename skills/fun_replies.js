@@ -82,6 +82,27 @@ module.exports = function (controller) {
   );
 
   controller.hears(
+    ["tracey"],
+    ["message", "direct_message", "direct_mention"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text:
+          "Tracey, Tracey, bo-bacey, bonanan-fanna fo-facey, fee fi mo-macey, TRACEY!",
+      });
+    }
+  );
+
+  controller.hears(
+    ["martin"],
+    ["message", "direct_message", "direct_mention"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text: "Martin? The mighty duck man himself! MARTIIIIIIN!",
+      });
+    }
+  );
+
+  controller.hears(
     ["violation"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
