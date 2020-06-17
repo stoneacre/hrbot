@@ -103,6 +103,17 @@ module.exports = function (controller) {
   );
 
   controller.hears(
+    ["louise"],
+    ["message", "direct_message", "direct_mention"],
+    async function (bot, message) {
+      await bot.reply(message, {
+        text:
+          "Such a lovely name (and person). Here is my favorite song with Louise in the lyrics: https://www.youtube.com/watch?v=c655S13hAy8",
+      });
+    }
+  );
+
+  controller.hears(
     ["violation"],
     ["direct_mention", "direct_message"],
     async function (bot, message) {
